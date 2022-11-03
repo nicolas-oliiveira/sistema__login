@@ -34,9 +34,9 @@ class cadastroController
         }
     }
 
-    public function listar()
+    public function listar($id)
     {
-        return $result = $this->cadastro->listar();
+        return $result = $this->cadastro->listar($id);
     }
 
     private function editar($id){
@@ -53,6 +53,15 @@ class cadastroController
             echo "<script>alert('Registro alterado com sucesso!');document.location='../consulta.php'</script>";
         } else {
             echo "<script>alert('Erro ao alterar o registro!');<script>";
+        }
+    }
+
+    public function excluir($id){
+        $result = $this->cadastro->excluir($id);
+        if($result >= 1){
+            echo "<script>alert('Registro excluido com sucesso!');document.location='consulta.php'</script>";
+        }else{
+            echo "<script>alert('Erro ao excluir o registro!');</script>";
         }
     }
 }

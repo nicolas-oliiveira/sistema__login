@@ -1,5 +1,5 @@
 <?php
-require_once("../sistema_login/controller/ControllerCadastro.php");
+require_once("../sistema__login/controller/ControllerCadastro.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -85,7 +85,7 @@ require_once("../sistema_login/controller/ControllerCadastro.php");
                                 <td scope="col"><?php echo $result[$i]['senha']; ?></td>
                                 <td scope="col">
                                     <button type="button" class="btn btn-dark" onclick="location.href='editarClientes.php?id=<?php echo $result[$i]['id']; ?>'">Editar</button>
-                                    <button type="button" class="btn btn-dark">Excluir</button>
+                                    <button type="button" class="btn btn-dark" onclick="location.href='excluirClientes.php?id=<?php echo $resultado[$i]['id'];?>'" style="widht: 72px;">Excluir</button>
                                 </td>
                             </tr>
                         <?php

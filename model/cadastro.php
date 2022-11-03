@@ -67,12 +67,16 @@ class Cadastro extends Banco {
         return $this->setCadastro($this->getEmail(),$this->getSenha(),$this->getEndereco(),$this->getBairro(),$this->getCep(),$this->getCidade(),$this->getEstado());
     }
 
-    public function listar(){
-        return $this->getCadastro();
+    public function listar($id){
+        return $this->getCadastro($id);
     }
 
     public function editar(){
         return $this->updateCadastro($this->getId(),$this->getEmail(),$this->getSenha(),$this->getEndereco(),$this->getBairro(),$this->getCep(),$this->getCidade(),$this->getEstado());
+    }
+
+    public function excluir($id){
+        return $this->deleteCadastro($id);
     }
 
 }
